@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Inspiration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #fff8dc;
+    }
+    #quote {
+      font-size: 1.8em;
+      margin: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Daily Inspiration 🌟</h1>
+  <p id="quote">Loading your inspiration...</p>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Every day is a fresh start.",
+      "You are stronger than you think.",
+      "Dream big and dare to fail.",
+      "Happiness is homemade.",
+      "Your smile can change the world.",
+      "Keep going, you’re doing great!"
+    ];
+
+    // Pick a quote based on today’s date
+    const today = new Date();
+    const index = today.getDate() % quotes.length;
+    document.getElementById("quote").innerText = quotes[index];
+  </script>
+</body>
+</html>
